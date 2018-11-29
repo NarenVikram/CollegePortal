@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search</title>
+	
+<meta name="author" content="your name" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div id="page">
+<div id="logo">
+			
+ <h1><a href="/" id="logoLink"></a></h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+                               
+                                <li><a href="careers.html">careers</a></li>
+                                <li><a href="search.html">Search</a></li>
+
+
+			</ul>	
+		</div><br><br><br><br>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<h2 class="w3-center">Lambton college Toronto</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="slide.jpg" style="width:100%">
+  <img class="mySlides" src="slide1.jpg" style="width:100%">
+  <img class="mySlides" src="slide2.jpg" style="width:100%">
+  <img class="mySlides" src="slide3.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<h2>Available Courses </h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Available Courses.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Course</th>
+    <th style="width:40%;">Available Intake</th>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Computer Software & Database Development</a></td>
+    <td>Sep</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Cloud Computing for BidData</a></td>
+    <td>Jan</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Project Management</a></td>
+    <td>May</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Chemical Engineering</a></td>
+    <td>May</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Computer Scinece</a></td>
+    <td>Sep</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Mathematical Approches</a></td>
+    <td>Jan</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Cloud Computing</a></td>
+    <td>May</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.lambtoncollege.ca/custom/LambtonApps/Programs/ProgramList-Toronto.aspx">Management Sciences</a></td>
+    <td>Sep</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+<br/><br/><br/>
+<div class="pagination";align="center">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+
+		<div id="footer">
+		<p class="lf">Copyright &copy; 2017 <a href="#">Narendra Vikram</a> - All Rights Reserved</p>
+		</div>     
+</body>
+</html>
